@@ -8,3 +8,6 @@ def task1(df):
     df.filter().withColumn
 
     write(df, directory)
+
+def task2(df):
+    df.write.csv('path/file.csv', header=True, mode='overwrite')
