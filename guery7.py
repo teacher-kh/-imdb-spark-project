@@ -1,4 +1,7 @@
 from pyspark.sql.functions import floor
+from pyspark import SparkConf
+from pyspark.sql import SparkSession
+import pyspark.sql.functions as f
 
 df_movies = df_movies.withColumn("decade", floor(df_movies.startYear/10)*10)
 
