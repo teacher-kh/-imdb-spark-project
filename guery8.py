@@ -1,3 +1,7 @@
+from pyspark import SparkConf
+from pyspark.sql import SparkSession
+import pyspark.sql.functions as f
+
 joined_df = title_basics.join(title_ratings, on="tconst")
 
 grouped_df = joined_df.groupBy("genres").agg(avg("averageRating").alias("avg_rating")).orderBy(desc("avg_rating"))
