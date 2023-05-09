@@ -1,4 +1,7 @@
 from pyspark.sql.functions import col
+from pyspark import SparkConf
+from pyspark.sql import SparkSession
+import pyspark.sql.functions as f
 
 
 join_expr = (title_principals_df["tconst"] == title_basics_df["tconst"]) & \
